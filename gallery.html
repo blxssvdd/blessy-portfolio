@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery • blessy!!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><span>✦</span> blessy!!</a>
+      <button class="burger" aria-label="Меню">
+  <span></span><span></span><span></span>
+</button>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">🩵 Home</a></li>
+        <li><a class="nav-link" href="about.html">✨ About</a></li>
+        <li><a class="nav-link" href="projects.html">💻 Projects</a></li>
+        <li><a class="nav-link active" href="gallery.html">📸 Photos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="fade-in">
+    <section class="container section">
+      <div class="photos-header">
+        <h2 class="fx-title">Photo <span class="accent">Gallery</span></h2>
+        <div class="filters" role="tablist" aria-label="Фильтры галереи">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="rimuru" role="tab">Rimuru 🩵</button>
+          <button class="filter-btn" data-filter="anime" role="tab">Anime ✨</button>
+          <button class="filter-btn" data-filter="life" role="tab">Life 💾</button>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery-item" data-category="rimuru">
+          <img src="assets/gallery/8a649494739eb5373af82063baa88ef6.jpg" alt="Forest lights" loading="lazy">
+          <figcaption>My love — Rimuru Tempest</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="anime">
+          <img src="assets/gallery/a253b371860efce85112eec42f8dfc34.jpg" alt="Neon city night" loading="lazy">
+          <figcaption>Hellsing — a great anime. Especially Alucard.</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="life">
+          <img src="assets/gallery/IMG_20251015_170212_618.jpg" alt="Sky reflection" loading="lazy">
+          <figcaption>Its me, lol</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="life">
+          <img src="assets/gallery/-2147483648_-211577.jpg" alt="Dream motion" loading="lazy">
+          <figcaption>Great workplace</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lb-stage" role="dialog" aria-label="Просмотр фото">
+      <img class="lb-img" src="" alt="">
+      <div class="lb-caption"></div>
+      <button class="lb-prev" aria-label="Предыдущее">←</button>
+      <button class="lb-next" aria-label="Следующее">→</button>
+      <button class="lb-close" aria-label="Закрыть">✕</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

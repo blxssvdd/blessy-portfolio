@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects • blessy!!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><span>✦</span> blessy!!</a>
+      <button class="burger" aria-label="Меню">
+  <span></span><span></span><span></span>
+</button>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">🩵 Home</a></li>
+        <li><a class="nav-link" href="about.html">✨ About</a></li>
+        <li><a class="nav-link active" href="projects.html">💻 Projects</a></li>
+        <li><a class="nav-link" href="gallery.html">📸 Photos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="fade-in">
+    <section class="container section">
+      <div class="section-head">
+        <h2 class="fx-title">My <span class="accent">Projects</span></h2>
+        <p class="subtitle" style="text-align:left;max-width:720px">
+          Here are my projects that were written with love from the bottom of my heart 🩵
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="assets/gallery/6f001dd1b731da6cbb0e60ca9ab3f8e5.jpg" alt="Project 1" loading="lazy">
+          <div class="project-body">
+            <h3>Birthday Telegram Bot</h3>
+            <p>A Telegram bot for identifying days until your birthday, with time zone support and a beautiful calendar!</p>
+            <div class="tags"><span>#Python</span><span>#Aiogram</span><span>#UX/UI</span></div>
+            <a href="https://t.me/BirthdayCountdownBot_bot" class="btn ghost">View project</a>
+            <a href="https://github.com/blxssvdd/BirthdayTelegramBot" class="btn ghost">View GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/gallery/7fca8beb939628364cfc309f4ed6bb75.jpg" alt="Project 2" loading="lazy">
+          <div class="project-body">
+            <h3>Sukuna Discord Bot</h3>
+            <p>Is a multipurpose Discord bot designed to bring fun, interaction, and useful utilities to your community. </p>
+            <div class="tags"><span>#Python</span><span>#discord.py</span><span>#UX/UI</span></div>
+            <a href="https://discord.com/oauth2/authorize?client_id=1094355452797669436" class="btn ghost">View project</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/gallery/97c9f83452ddf48cc2b6cbcb9e840219.jpg" alt="Project 3" loading="lazy">
+          <div class="project-body">
+            <h3>Tournament Manager API</h3>
+            <p>Project for a tournament management system built with FastAPI.</p>
+            <div class="tags"><span>#Python</span><span>#FastAPI</span><span>#Backend</span></div>
+            <a href="https://github.com/blxssvdd/Tournaments-Manager-API" class="btn ghost">View GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
