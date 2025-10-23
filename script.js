@@ -1,3 +1,4 @@
+// === Навигация (бургер) ===
 (function navBurger() {
   const burger = document.querySelector('.burger');
   const linksWrap = document.querySelector('.nav-links');
@@ -9,15 +10,12 @@
   };
 
   burger.addEventListener('click', toggle);
-
-
   linksWrap.addEventListener('click', (e) => {
     const a = e.target.closest('a.nav-link');
     if (!a) return;
     burger.classList.remove('active');
     linksWrap.classList.remove('open');
   });
-
 
   const onResize = () => {
     if (window.innerWidth > 800) {
@@ -29,6 +27,7 @@
 })();
 
 
+// === Анимированный фон (звёзды) ===
 (function starfield(){
   const canvas = document.getElementById('bg-canvas');
   if (!canvas) return;
@@ -102,7 +101,6 @@
     requestAnimationFrame(step);
   }
 
-
   document.addEventListener('visibilitychange', () => {
     running = document.visibilityState === 'visible';
   });
@@ -113,50 +111,59 @@
 })();
 
 
+// === Галерея и фильтры (без дерганий) ===
 (function galleryFilters(){
   const buttons = document.querySelectorAll('.filter-btn');
   const items   = document.querySelectorAll('.gallery-item');
   if (!buttons.length || !items.length) return;
 
-
   items.forEach((card) => {
+    card.dataset.hidden = '0';
     card.style.display = '';
     requestAnimationFrame(() => card.classList.add('show'));
   });
+
+  function applyFilter(filter) {
+    const toShow = [], toHide = [];
+    items.forEach(card => {
+      const show = (filter === 'all') || (card.dataset.category === filter);
+      if (show) toShow.push(card);
+      else toHide.push(card);
+    });
+
+    toHide.forEach(card => {
+      if (card.dataset.hidden === '1') return;
+      card.dataset.hidden = '1';
+      card.classList.remove('show');
+      card.style.display = 'none';
+    });
+
+    toShow.forEach(card => {
+      if (card.dataset.hidden === '0') return;
+      card.dataset.hidden = '0';
+      card.style.display = '';
+      requestAnimationFrame(() => card.classList.add('show'));
+    });
+  }
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       buttons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
-      const f = btn.dataset.filter;
-
-      items.forEach(card => {
-        const show = (f === 'all') || (card.dataset.category === f);
-
-        if (show) {
-          card.style.display = '';
-          requestAnimationFrame(() => card.classList.add('show'));
-        } else {
-          card.classList.remove('show');
-          setTimeout(() => { card.style.display = 'none'; }, 450);
-        }
-      });
+      applyFilter(btn.dataset.filter);
     });
   });
 })();
 
 
+// === Лайтбокс (фикс кнопки закрытия + плавное появление) ===
 (function lightboxInit(){
   const lb = document.getElementById('lightbox');
   if (!lb) return;
 
   const imgEl = lb.querySelector('.lb-img');
   const capEl = lb.querySelector('.lb-caption');
-  const btnPrev = lb.querySelector('.lb-prev');
-  const btnNext = lb.querySelector('.lb-next');
   const btnClose = lb.querySelector('.lb-close');
-
   const figuresAll = Array.from(document.querySelectorAll('.gallery-item'));
 
   function visibleFigures(){
@@ -175,16 +182,23 @@
     imgEl.src = img.src;
     imgEl.alt = img.alt || '';
     capEl.textContent = cap ? cap.textContent : '';
-    lb.classList.add('open');
-    lb.setAttribute('aria-hidden', 'false');
+    lb.classList.add('visible');
+    // небольшой таймаут нужен для срабатывания transition
+    requestAnimationFrame(() => lb.classList.add('open'));
   }
+
   function close(){
+    // предотвращаем множественные нажатия
+    if (lb.classList.contains('closing')) return;
     lb.classList.remove('open');
-    lb.setAttribute('aria-hidden', 'true');
+    lb.classList.add('closing');
+    setTimeout(() => {
+      lb.classList.remove('visible', 'closing');
+    }, 250);
   }
+
   function next(){ openAt(index + 1); }
   function prev(){ openAt(index - 1); }
-
 
   figuresAll.forEach(f => {
     f.addEventListener('click', () => {
@@ -194,23 +208,26 @@
     });
   });
 
+  // 💫 теперь крестик всегда работает
+  btnClose?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    close();
+  });
 
-  btnNext.addEventListener('click', next);
-  btnPrev.addEventListener('click', prev);
-  btnClose.addEventListener('click', close);
+  // закрытие по клику вне фото
+  lb.addEventListener('click', (e) => {
+    if (e.target === lb) close();
+  });
 
-
-  lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
-
-
+  // клавиши
   document.addEventListener('keydown', (e) => {
-    if (!lb.classList.contains('open')) return;
+    if (!lb.classList.contains('visible')) return;
     if (e.key === 'Escape') close();
     if (e.key === 'ArrowRight') next();
     if (e.key === 'ArrowLeft') prev();
   });
 
-
+  // свайпы
   let startX = 0;
   lb.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
   lb.addEventListener('touchend', e => {
@@ -219,3 +236,6 @@
     if (dx < -50) next();
   }, {passive:true});
 })();
+
+
+
