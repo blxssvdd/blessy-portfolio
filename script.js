@@ -1,4 +1,3 @@
-// === Навигация (бургер) ===
 (function navBurger() {
   const burger = document.querySelector('.burger');
   const linksWrap = document.querySelector('.nav-links');
@@ -27,7 +26,6 @@
 })();
 
 
-// === Анимированный фон (звёзды) ===
 (function starfield(){
   const canvas = document.getElementById('bg-canvas');
   if (!canvas) return;
@@ -111,7 +109,6 @@
 })();
 
 
-// === Галерея и фильтры (без дерганий) ===
 (function galleryFilters(){
   const buttons = document.querySelectorAll('.filter-btn');
   const items   = document.querySelectorAll('.gallery-item');
@@ -156,7 +153,6 @@
 })();
 
 
-// === Лайтбокс (фикс кнопки закрытия + плавное появление) ===
 (function lightboxInit(){
   const lb = document.getElementById('lightbox');
   if (!lb) return;
@@ -183,12 +179,10 @@
     imgEl.alt = img.alt || '';
     capEl.textContent = cap ? cap.textContent : '';
     lb.classList.add('visible');
-    // небольшой таймаут нужен для срабатывания transition
     requestAnimationFrame(() => lb.classList.add('open'));
   }
 
   function close(){
-    // предотвращаем множественные нажатия
     if (lb.classList.contains('closing')) return;
     lb.classList.remove('open');
     lb.classList.add('closing');
@@ -208,18 +202,15 @@
     });
   });
 
-  // 💫 теперь крестик всегда работает
   btnClose?.addEventListener('click', (e) => {
     e.stopPropagation();
     close();
   });
 
-  // закрытие по клику вне фото
   lb.addEventListener('click', (e) => {
     if (e.target === lb) close();
   });
 
-  // клавиши
   document.addEventListener('keydown', (e) => {
     if (!lb.classList.contains('visible')) return;
     if (e.key === 'Escape') close();
@@ -227,7 +218,6 @@
     if (e.key === 'ArrowLeft') prev();
   });
 
-  // свайпы
   let startX = 0;
   lb.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
   lb.addEventListener('touchend', e => {

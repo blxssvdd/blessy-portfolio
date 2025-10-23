@@ -377,11 +377,6 @@ figcaption{
   .tags{margin:.45rem 0 .8rem}
 }
 
-/* ===================== */
-/* 💫 Дополнительные анимации */
-/* ===================== */
-
-/* Fade-анимации галереи */
 .gallery-item.fade-in {
   animation: fadeInCard 0.35s ease forwards;
 }
@@ -397,7 +392,6 @@ figcaption{
   to   { opacity: 0; transform: translateY(12px) scale(0.97); }
 }
 
-/* Лайтбокс плавное открытие/закрытие */
 .lightbox {
   opacity: 0;
   pointer-events: none;
@@ -414,7 +408,5 @@ figcaption{
   opacity: 0;
 }
 
-
-/* Скрываем лишние кнопки (стрелки) */
 .lb-prev,
 .lb-next { display: none !important; }
