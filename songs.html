@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="assets/gallery/image.png">
   <title>Favourite Songs • blessy!!</title>
   <meta name="description" content="Подборка любимых треков blessy!! с мини-плеером и категориями.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Marcellus&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Marcellus&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
@@ -17,8 +20,8 @@
     <nav class="nav container">
       <a href="index.html" class="brand"><span>✦</span> blessy!!</a>
       <button class="burger" aria-label="Меню">
-  <span></span><span></span><span></span>
-</button>
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav-links">
         <li><a class="nav-link" href="index.html">🩵 Home</a></li>
         <li><a class="nav-link" href="about.html">✨ About</a></li>
@@ -34,7 +37,8 @@
       <div class="section-head">
         <h2 class="fx-title">Favourite <span class="accent">Songs</span></h2>
         <p class="subtitle">
-          A collection of tracks that inspire and accompany my projects. Each track has a mini-player with standard controls: play, rewind, and skip.
+          A collection of tracks that inspire and accompany my projects. Each track has a mini-player with standard
+          controls: play, rewind, and skip.
         </p>
       </div>
 
@@ -44,11 +48,13 @@
           <p class="category-note">Tracks that help you get into "always on top" mode and speed up coding marathons.</p>
         </div>
         <div class="tracks-grid">
-          <article class="track-card is-demo" data-category="energy" data-track-src="assets/songs/03 Three Days Grace - Animal I Have Become.mp3">
+          <article class="track-card is-demo" data-category="energy"
+            data-track-src="assets/songs/03 Three Days Grace - Animal I Have Become.mp3">
             <!-- TODO: Заменить демо-трек на свой, если нужно -->
             <div class="track-card-main" data-animate>
               <!-- TODO: Указать ссылку на обложку в переменной ниже -->
-              <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b273fa4c18fdbd1bf1a39b7b794f');"></div>
+              <div class="track-cover"
+                style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b273fa4c18fdbd1bf1a39b7b794f');"></div>
               <div class="track-meta">
                 <h4 class="track-title">Animal I Have Become</h4>
                 <p class="track-artist">Three Days Grace</p>
@@ -62,12 +68,14 @@
                 <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
               </div>
               <div class="track-progress">
-                <input class="track-slider" type="range" min="0" max="100" value="0" step="1" aria-label="Позиция трека">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
                 <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
               </div>
               <div class="track-volume">
                 <span class="volume-icon" aria-hidden="true">🔊</span>
-                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1" aria-label="Громкость">
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
               </div>
             </div>
           </article>
@@ -76,7 +84,8 @@
             <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
             <div class="track-card-main" data-animate>
               <!-- TODO: Указать ссылку на обложку в переменной ниже -->
-              <div class="track-cover" style="--cover-image:url('https://artwork.anghcdn.co/webp/?id=49771583&size=320');"></div>
+              <div class="track-cover"
+                style="--cover-image:url('https://artwork.anghcdn.co/webp/?id=49771583&size=320');"></div>
               <div class="track-meta">
                 <h4 class="track-title">Duality</h4>
                 <p class="track-artist">Slipknot</p>
@@ -90,21 +99,25 @@
                 <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
               </div>
               <div class="track-progress">
-                <input class="track-slider" type="range" min="0" max="100" value="0" step="1" aria-label="Позиция трека">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
                 <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
               </div>
               <div class="track-volume">
                 <span class="volume-icon" aria-hidden="true">🔊</span>
-                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1" aria-label="Громкость">
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
               </div>
             </div>
           </article>
 
-          <article class="track-card" data-category="energy" data-track-src="assets/songs/06 Limp Bizkit - Rollin  (Air Raid Vehicle).mp3">
+          <article class="track-card" data-category="energy"
+            data-track-src="assets/songs/06 Limp Bizkit - Rollin  (Air Raid Vehicle).mp3">
             <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
             <div class="track-card-main" data-animate>
               <!-- TODO: Указать ссылку на обложку в переменной ниже -->
-              <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b2734a31b146c7cf07705d912efe');"></div>
+              <div class="track-cover"
+                style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b2734a31b146c7cf07705d912efe');"></div>
               <div class="track-meta">
                 <h4 class="track-title">Rollin</h4>
                 <p class="track-artist">Limp Bizkit</p>
@@ -118,12 +131,107 @@
                 <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
               </div>
               <div class="track-progress">
-                <input class="track-slider" type="range" min="0" max="100" value="0" step="1" aria-label="Позиция трека">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
                 <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
               </div>
               <div class="track-volume">
                 <span class="volume-icon" aria-hidden="true">🔊</span>
-                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1" aria-label="Громкость">
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
+              </div>
+            </div>
+          </article>
+          <article class="track-card" data-category="energy"
+            data-track-src="assets/songs/01 DNCE - Kissing Strangers.mp3">
+            <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
+            <div class="track-card-main" data-animate>
+              <!-- TODO: Указать ссылку на обложку в переменной ниже -->
+              <div class="track-cover"
+                style="--cover-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFKoHJ4obv_7nt4QDl21SXWaha7Gb6uLAINQ&s');"></div>
+              <div class="track-meta">
+                <h4 class="track-title">KISSING STRANGERS</h4>
+                <p class="track-artist">DNCE</p>
+                <div class="track-tags"><span>#pop</span><span>#DNCE</span></div>
+              </div>
+            </div>
+            <div class="track-control-row" data-animate>
+              <div class="track-buttons">
+                <button class="track-btn prev" type="button" aria-label="Предыдущий трек"></button>
+                <button class="track-btn play" type="button" aria-label="Воспроизвести"></button>
+                <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
+              </div>
+              <div class="track-progress">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
+                <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
+              </div>
+              <div class="track-volume">
+                <span class="volume-icon" aria-hidden="true">🔊</span>
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
+              </div>
+            </div>
+          </article>
+          <article class="track-card" data-category="energy"
+            data-track-src="assets/songs/JUMPING NIHILIST.mp3">
+            <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
+            <div class="track-card-main" data-animate>
+              <!-- TODO: Указать ссылку на обложку в переменной ниже -->
+              <div class="track-cover"
+                style="--cover-image:url('https://i1.sndcdn.com/artworks-9Cht4J5RgBzzqbDX-ekpz5w-t500x500.png');"></div>
+              <div class="track-meta">
+                <h4 class="track-title">JUMPING NIHILIST</h4>
+                <p class="track-artist">HARDX</p>
+                <div class="track-tags"><span>#electronic</span><span>#jumpstyle</span></div>
+              </div>
+            </div>
+            <div class="track-control-row" data-animate>
+              <div class="track-buttons">
+                <button class="track-btn prev" type="button" aria-label="Предыдущий трек"></button>
+                <button class="track-btn play" type="button" aria-label="Воспроизвести"></button>
+                <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
+              </div>
+              <div class="track-progress">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
+                <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
+              </div>
+              <div class="track-volume">
+                <span class="volume-icon" aria-hidden="true">🔊</span>
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
+              </div>
+            </div>
+          </article>
+          <article class="track-card" data-category="energy"
+            data-track-src="assets/songs/UMBRELLA - CARAMEL JESTER@uasaverbot.mp3">
+            <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
+            <div class="track-card-main" data-animate>
+              <!-- TODO: Указать ссылку на обложку в переменной ниже -->
+              <div class="track-cover"
+                style="--cover-image:url('https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/50/1d/97/501d973f-acd9-8a63-a68e-d0a831eb0daf/cover.jpg/600x600bf-60.jpg');"></div>
+              <div class="track-meta">
+                <h4 class="track-title">CARAMEL JESTER</h4>
+                <p class="track-artist">UMBRELLA</p>
+                <div class="track-tags"><span>#hardtekk</span><span>#tekk</span></div>
+              </div>
+            </div>
+            <div class="track-control-row" data-animate>
+              <div class="track-buttons">
+                <button class="track-btn prev" type="button" aria-label="Предыдущий трек"></button>
+                <button class="track-btn play" type="button" aria-label="Воспроизвести"></button>
+                <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
+              </div>
+              <div class="track-progress">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
+                <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
+              </div>
+              <div class="track-volume">
+                <span class="volume-icon" aria-hidden="true">🔊</span>
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
               </div>
             </div>
           </article>
@@ -140,7 +248,9 @@
             <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
             <div class="track-card-main" data-animate>
               <!-- TODO: Указать ссылку на обложку в переменной ниже -->
-              <div class="track-cover" style="--cover-image:url('https://cdn-images.dzcdn.net/images/cover/4d4f5dfab7874a42b3dfb8e931578eb8/0x1900-000000-80-0-0.jpg');"></div>
+              <div class="track-cover"
+                style="--cover-image:url('https://cdn-images.dzcdn.net/images/cover/4d4f5dfab7874a42b3dfb8e931578eb8/0x1900-000000-80-0-0.jpg');">
+              </div>
               <div class="track-meta">
                 <h4 class="track-title">NO REMORSE</h4>
                 <p class="track-artist">KARTER DARK</p>
@@ -154,12 +264,14 @@
                 <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
               </div>
               <div class="track-progress">
-                <input class="track-slider" type="range" min="0" max="100" value="0" step="1" aria-label="Позиция трека">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
                 <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
               </div>
               <div class="track-volume">
                 <span class="volume-icon" aria-hidden="true">🔊</span>
-                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1" aria-label="Громкость">
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
               </div>
             </div>
           </article>
@@ -168,7 +280,8 @@
             <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
             <div class="track-card-main" data-animate>
               <!-- TODO: Указать ссылку на обложку в переменной ниже -->
-              <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d00001e0267f152bd4446ab86fa41ba76');"></div>
+              <div class="track-cover"
+                style="--cover-image:url('https://i.scdn.co/image/ab67616d00001e0267f152bd4446ab86fa41ba76');"></div>
               <div class="track-meta">
                 <h4 class="track-title">Home</h4>
                 <p class="track-artist">WIV</p>
@@ -182,12 +295,14 @@
                 <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
               </div>
               <div class="track-progress">
-                <input class="track-slider" type="range" min="0" max="100" value="0" step="1" aria-label="Позиция трека">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
                 <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
               </div>
               <div class="track-volume">
                 <span class="volume-icon" aria-hidden="true">🔊</span>
-                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1" aria-label="Громкость">
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
               </div>
             </div>
           </article>
@@ -196,7 +311,8 @@
             <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
             <div class="track-card-main" data-animate>
               <!-- TODO: Указать ссылку на обложку в переменной ниже -->
-              <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b27373321e5ebb4238a09204be34');"></div>
+              <div class="track-cover"
+                style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b27373321e5ebb4238a09204be34');"></div>
               <div class="track-meta">
                 <h4 class="track-title">i love you.</h4>
                 <p class="track-artist">WIV</p>
@@ -210,12 +326,108 @@
                 <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
               </div>
               <div class="track-progress">
-                <input class="track-slider" type="range" min="0" max="100" value="0" step="1" aria-label="Позиция трека">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
                 <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
               </div>
               <div class="track-volume">
                 <span class="volume-icon" aria-hidden="true">🔊</span>
-                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1" aria-label="Громкость">
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
+              </div>
+            </div>
+          </article>
+          <article class="track-card" data-category="night"
+            data-track-src="assets/songs/SpotiDownloader.com - Dark City - Max000.mp3">
+            <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
+            <div class="track-card-main" data-animate>
+              <!-- TODO: Указать ссылку на обложку в переменной ниже -->
+              <div class="track-cover"
+                style="--cover-image:url('https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/4f/76/0f/4f760fcb-b739-3a61-9736-c1b883483416/artwork.jpg/600x600bf-60.jpg');">
+              </div>
+              <div class="track-meta">
+                <h4 class="track-title">Dark City</h4>
+                <p class="track-artist">MAX000</p>
+                <div class="track-tags"><span>#sad?</span><span>#nostalgia</span></div>
+              </div>
+            </div>
+            <div class="track-control-row" data-animate>
+              <div class="track-buttons">
+                <button class="track-btn prev" type="button" aria-label="Предыдущий трек"></button>
+                <button class="track-btn play" type="button" aria-label="Воспроизвести"></button>
+                <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
+              </div>
+              <div class="track-progress">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
+                <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
+              </div>
+              <div class="track-volume">
+                <span class="volume-icon" aria-hidden="true">🔊</span>
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
+              </div>
+            </div>
+          </article>
+          <article class="track-card" data-category="night" data-track-src="assets/songs/6 little eggs.mp3">
+            <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
+            <div class="track-card-main" data-animate>
+              <!-- TODO: Указать ссылку на обложку в переменной ниже -->
+              <div class="track-cover"
+                style="--cover-image:url('https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9c/30/1b/9c301bf5-df30-b848-c4b8-9dfca15aac83/5063112272678_Cover.jpg/600x600bf-60.jpg');">
+              </div>
+              <div class="track-meta">
+                <h4 class="track-title">6 little eggs</h4>
+                <p class="track-artist">B3nte</p>
+                <div class="track-tags"><span>#electonic</span><span>#nightcore</span></div>
+              </div>
+            </div>
+            <div class="track-control-row" data-animate>
+              <div class="track-buttons">
+                <button class="track-btn prev" type="button" aria-label="Предыдущий трек"></button>
+                <button class="track-btn play" type="button" aria-label="Воспроизвести"></button>
+                <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
+              </div>
+              <div class="track-progress">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
+                <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
+              </div>
+              <div class="track-volume">
+                <span class="volume-icon" aria-hidden="true">🔊</span>
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
+              </div>
+            </div>
+          </article>
+          <article class="track-card" data-category="night" data-track-src="assets/songs/LONOWN - starly (Slowed).mp3">
+            <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
+            <div class="track-card-main" data-animate>
+              <!-- TODO: Указать ссылку на обложку в переменной ниже -->
+              <div class="track-cover"
+                style="--cover-image:url('https://cdn-images.dzcdn.net/images/cover/ed477f0737ddc6881772336d962fcd34/0x1900-000000-80-0-0.jpg');">
+              </div>
+              <div class="track-meta">
+                <h4 class="track-title">starly (slowed)</h4>
+                <p class="track-artist">LONOWN</p>
+                <div class="track-tags"><span>#electonic</span><span>#angelcore</span></div>
+              </div>
+            </div>
+            <div class="track-control-row" data-animate>
+              <div class="track-buttons">
+                <button class="track-btn prev" type="button" aria-label="Предыдущий трек"></button>
+                <button class="track-btn play" type="button" aria-label="Воспроизвести"></button>
+                <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
+              </div>
+              <div class="track-progress">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
+                <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
+              </div>
+              <div class="track-volume">
+                <span class="volume-icon" aria-hidden="true">🔊</span>
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
               </div>
             </div>
           </article>
@@ -228,11 +440,13 @@
           <p class="category-note">Music for relaxed evenings when you want to breathe in the cosmos and slow down.</p>
         </div>
         <div class="tracks-grid">
-          <article class="track-card" data-category="chill" data-track-src="assets/songs/Jane Remover - Dancing with your eyes closed.mp3">
+          <article class="track-card" data-category="chill"
+            data-track-src="assets/songs/Jane Remover - Dancing with your eyes closed.mp3">
             <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
             <div class="track-card-main" data-animate>
               <!-- TODO: Указать ссылку на обложку в переменной ниже -->
-              <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b273ab0d83b752dcf9f2a7ddd51b');"></div>
+              <div class="track-cover"
+                style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b273ab0d83b752dcf9f2a7ddd51b');"></div>
               <div class="track-meta">
                 <h4 class="track-title">Dancing with your eyes closed</h4>
                 <p class="track-artist">Jane Remover</p>
@@ -246,21 +460,25 @@
                 <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
               </div>
               <div class="track-progress">
-                <input class="track-slider" type="range" min="0" max="100" value="0" step="1" aria-label="Позиция трека">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
                 <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
               </div>
               <div class="track-volume">
                 <span class="volume-icon" aria-hidden="true">🔊</span>
-                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1" aria-label="Громкость">
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
               </div>
             </div>
           </article>
 
-          <article class="track-card" data-category="chill" data-track-src="assets/songs/Mitski - Washing Machine Heart.mp3">
+          <article class="track-card" data-category="chill"
+            data-track-src="assets/songs/Mitski - Washing Machine Heart.mp3">
             <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
             <div class="track-card-main" data-animate>
               <!-- TODO: Указать ссылку на обложку в переменной ниже -->
-              <div class="track-cover" style="--cover-image:url('https://i1.sndcdn.com/artworks-fxdaQu510Tym6pLT-UiGczg-t500x500.jpg');"></div>
+              <div class="track-cover"
+                style="--cover-image:url('https://i1.sndcdn.com/artworks-fxdaQu510Tym6pLT-UiGczg-t500x500.jpg');"></div>
               <div class="track-meta">
                 <h4 class="track-title">Washing Machine Heart</h4>
                 <p class="track-artist">Mitski</p>
@@ -274,21 +492,26 @@
                 <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
               </div>
               <div class="track-progress">
-                <input class="track-slider" type="range" min="0" max="100" value="0" step="1" aria-label="Позиция трека">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
                 <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
               </div>
               <div class="track-volume">
                 <span class="volume-icon" aria-hidden="true">🔊</span>
-                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1" aria-label="Громкость">
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
               </div>
             </div>
           </article>
 
-          <article class="track-card" data-category="chill" data-track-src="assets/songs/01 The Living Tombstone - My Ordinary Life.mp3">
+          <article class="track-card" data-category="chill"
+            data-track-src="assets/songs/01 The Living Tombstone - My Ordinary Life.mp3">
             <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
             <div class="track-card-main" data-animate>
               <!-- TODO: Указать ссылку на обложку в переменной ниже -->
-              <div class="track-cover" style="--cover-image:url('https://images.genius.com/54fa70e9c0a41d9531f5da6c0755fefc.1000x1000x1.png');"></div>
+              <div class="track-cover"
+                style="--cover-image:url('https://images.genius.com/54fa70e9c0a41d9531f5da6c0755fefc.1000x1000x1.png');">
+              </div>
               <div class="track-meta">
                 <h4 class="track-title">My Ordinary Life</h4>
                 <p class="track-artist">The Living Tombstone</p>
@@ -302,12 +525,105 @@
                 <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
               </div>
               <div class="track-progress">
-                <input class="track-slider" type="range" min="0" max="100" value="0" step="1" aria-label="Позиция трека">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
                 <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
               </div>
               <div class="track-volume">
                 <span class="volume-icon" aria-hidden="true">🔊</span>
-                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1" aria-label="Громкость">
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
+              </div>
+            </div>
+          </article>
+          <article class="track-card" data-category="chill"
+            data-track-src="assets/songs/Devi McCallion - I Want Things to Be Beautiful.mp3">
+            <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
+            <div class="track-card-main" data-animate>
+              <!-- TODO: Указать ссылку на обложку в переменной ниже -->
+              <div class="track-cover" style="--cover-image:url('https://f4.bcbits.com/img/a3733775472_16.jpg');"></div>
+              <div class="track-meta">
+                <h4 class="track-title">I Want Things to Be Beautiful</h4>
+                <p class="track-artist">Devi McCallion</p>
+                <div class="track-tags"><span>#electronic</span><span>#synth</span></div>
+              </div>
+            </div>
+            <div class="track-control-row" data-animate>
+              <div class="track-buttons">
+                <button class="track-btn prev" type="button" aria-label="Предыдущий трек"></button>
+                <button class="track-btn play" type="button" aria-label="Воспроизвести"></button>
+                <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
+              </div>
+              <div class="track-progress">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
+                <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
+              </div>
+              <div class="track-volume">
+                <span class="volume-icon" aria-hidden="true">🔊</span>
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
+              </div>
+            </div>
+          </article>
+          <article class="track-card" data-category="chill" data-track-src="assets/songs/NE CMOTRN.mp3">
+            <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
+            <div class="track-card-main" data-animate>
+              <!-- TODO: Указать ссылку на обложку в переменной ниже -->
+              <div class="track-cover"
+                style="--cover-image:url('https://i.ytimg.com/vi/lYQwtKMhsEM/maxresdefault.jpg');"></div>
+              <div class="track-meta">
+                <h4 class="track-title">NE CMOTRN</h4>
+                <p class="track-artist">STAKILLAZ</p>
+                <div class="track-tags"><span>#jumpstyle</span><span>#hardstyle</span></div>
+              </div>
+            </div>
+            <div class="track-control-row" data-animate>
+              <div class="track-buttons">
+                <button class="track-btn prev" type="button" aria-label="Предыдущий трек"></button>
+                <button class="track-btn play" type="button" aria-label="Воспроизвести"></button>
+                <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
+              </div>
+              <div class="track-progress">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
+                <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
+              </div>
+              <div class="track-volume">
+                <span class="volume-icon" aria-hidden="true">🔊</span>
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
+              </div>
+            </div>
+          </article>
+          <article class="track-card" data-category="chill" data-track-src="assets/songs/FACE - Антидепрессант.mp3">
+            <!-- TODO: Вставить путь к аудио файлу в атрибут data-track-src -->
+            <div class="track-card-main" data-animate>
+              <!-- TODO: Указать ссылку на обложку в переменной ниже -->
+              <div class="track-cover"
+                style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b2730c2220ba02bb0650b402d512');">
+              </div>
+              <div class="track-meta">
+                <h4 class="track-title">Антидепрессант</h4>
+                <p class="track-artist">FACE</p>
+                <div class="track-tags"><span>#rap</span><span>#hip-hop</span></div>
+              </div>
+            </div>
+            <div class="track-control-row" data-animate>
+              <div class="track-buttons">
+                <button class="track-btn prev" type="button" aria-label="Предыдущий трек"></button>
+                <button class="track-btn play" type="button" aria-label="Воспроизвести"></button>
+                <button class="track-btn next" type="button" aria-label="Следующий трек"></button>
+              </div>
+              <div class="track-progress">
+                <input class="track-slider" type="range" min="0" max="100" value="0" step="1"
+                  aria-label="Позиция трека">
+                <div class="track-time"><span class="current">0:00</span><span class="duration">0:00</span></div>
+              </div>
+              <div class="track-volume">
+                <span class="volume-icon" aria-hidden="true">🔊</span>
+                <input class="track-volume-slider" type="range" min="0" max="100" value="70" step="1"
+                  aria-label="Громкость">
               </div>
             </div>
           </article>
@@ -318,4 +634,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
